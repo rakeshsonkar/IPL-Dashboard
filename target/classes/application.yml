@@ -1,0 +1,23 @@
+server:
+  port: 9004
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/ipldata
+    username: root
+    password: null
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    platform: org.hibernate.dialect.MySQLDialect
+  
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+  batch:
+    job:
+      enabled: false
+    jdbc:
+      initialize-schema: ALWAYS
+      
+
